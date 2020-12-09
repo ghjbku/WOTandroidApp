@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright 2019, The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android.marsrealestate.detail.DetailViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/main_photo_image"
+                android:layout_width="0dp"
+                android:layout_height="266dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{viewModel.selectedProperty.imgSrcUrl}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.selectedProperty.name}"
+                tools:text="name"
+                app:layout_constraintStart_toEndOf="@id/name_text_label"
+                app:layout_constraintTop_toBottomOf="@+id/main_photo_image" />
+
+            <TextView
+                android:id="@+id/name_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="TankName:"
+                app:layout_constraintEnd_toStartOf="@+id/name_text"
+                app:layout_constraintTop_toBottomOf="@+id/main_photo_image" />
+
+            <TextView
+                android:id="@+id/type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.selectedProperty.type}"
+                tools:text="type"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/type_text_label"
+                app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+            <TextView
+                android:id="@+id/type_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="TankType:"
+                app:layout_constraintEnd_toStartOf="@+id/type_text"
+                app:layout_constraintTop_toBottomOf="@+id/name_text_label" />
+
+            <TextView
+                android:id="@+id/tier_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.selectedProperty.tier}"
+                tools:text="tier"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/tier_text_label"
+                app:layout_constraintTop_toBottomOf="@+id/type_text" />
+
+            <TextView
+                android:id="@+id/tier_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="TankTier:"
+                app:layout_constraintEnd_toStartOf="@+id/tier_text"
+                app:layout_constraintTop_toBottomOf="@+id/type_text_label" />
+
+            <TextView
+                android:id="@+id/country_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.selectedProperty.country}"
+                tools:text="country"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/country_text_label"
+                app:layout_constraintTop_toBottomOf="@+id/tier_text_label" />
+
+            <TextView
+                android:id="@+id/country_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="TankCountry:"
+                app:layout_constraintEnd_toStartOf="@+id/country_text"
+                app:layout_constraintTop_toBottomOf="@+id/tier_text_label" />
+
+            <TextView
+                android:id="@+id/creditPrice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.selectedProperty.price}"
+                tools:text="price"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/creditPrice_text_text_label"
+                app:layout_constraintTop_toBottomOf="@+id/country_text_label" />
+
+            <TextView
+                android:id="@+id/creditPrice_text_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="Price in Credits:"
+                app:layout_constraintEnd_toStartOf="@+id/creditPrice_text"
+                app:layout_constraintTop_toBottomOf="@+id/country_text_label" />
+
+            <ImageView
+                android:id="@+id/country_photo_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{viewModel.selectedProperty.country_img}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/creditPrice_text_text_label"
+                tools:src="@drawable/china" />
+
+            <TextView
+                android:id="@+id/Strength_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@{viewModel.selectedProperty.strength}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Strength_text_label"
+                tools:text="strength" />
+
+            <TextView
+                android:id="@+id/Strength_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:ems="10"
+                android:text="Strength:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/country_photo_image" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
