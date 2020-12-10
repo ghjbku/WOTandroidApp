@@ -13,8 +13,8 @@ MarsRealEstateFinal - Solution Code
    - RecyclerView használata :white_check_mark: 
    - ClickListener helyes használata a RecyclerView elemein :white_check_mark: 
    - Webszolgáltatásből érkező adat feldolgozása és megjelenítése egy recyclerView-ban :white_check_mark: 
+   - DiffUtil és recyclerView :white_check_mark: 
    - RecyclerView header készítése
-   - DiffUtil és recyclerView
    - SafeArgs plugin
    - RoomDatabase használata (1-2 adatbázis táblával)
 License
