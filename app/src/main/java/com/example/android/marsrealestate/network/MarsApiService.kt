@@ -58,7 +58,7 @@ private val retrofit = Retrofit.Builder()
 interface MarsApiService {
     /**
      * Returns a Coroutine [List] of [MarsProperty] which can be fetched in a Coroutine scope.
-     * The @GET annotation indicates that the "realestate" endpoint will be requested with the GET
+     * The @GET annotation indicates that the "getAllTanks/" endpoint will be requested with the GET
      * HTTP method
      */
     @GET("getAllTanks/")
