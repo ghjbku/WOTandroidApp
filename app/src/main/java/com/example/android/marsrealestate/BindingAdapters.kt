@@ -17,6 +17,7 @@
 
 package com.example.android.marsrealestate
 
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.core.net.toUri
@@ -44,12 +45,18 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<MarsProperty>?) {
 fun bindImage(imgView: ImageView, imgUrl: String?) {
     imgUrl?.let {
         val imgUri = imgUrl.toUri().buildUpon().scheme("http").build()
+        try {
+
+
         Glide.with(imgView.context)
                 .load(imgUri)
                 .apply(RequestOptions()
                         .placeholder(R.drawable.loading_animation)
                         .error(R.drawable.ic_broken_image))
                 .into(imgView)
+        }catch (e: Exception){
+            Log.e(e.message," ERRRORRRRRRRRRRRRRR");
+        }
     }
 }
 

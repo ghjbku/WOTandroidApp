@@ -39,5 +39,12 @@ class DetailViewModel( marsProperty: MarsProperty,
     init {
         _selectedProperty.value = marsProperty
     }
+    val displayPropertyPrice = Transformations.map(selectedProperty) {
+        app.applicationContext.getString(
+                when (it.price) {
+                    "0" -> R.string.display_price_as_zero
+                    else -> R.string.display_price
+                }, it.price)
+    }
 }
 

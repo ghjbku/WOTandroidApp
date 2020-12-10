@@ -127,7 +127,7 @@
                 android:id="@+id/creditPrice_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.selectedProperty.price}"
+                android:text="@{viewModel.displayPropertyPrice}"
                 tools:text="price"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@id/creditPrice_text_text_label"

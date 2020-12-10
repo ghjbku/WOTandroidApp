@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true" >
+        <domain includeSubdomains="true">176.63.48.164</domain>
+        <domain includeSubdomains="true">wiki.gcdn.co</domain>
+        <domain includeSubdomains="true">api.worldoftanks.eu</domain>
+
+    </domain-config>
+</network-security-config>

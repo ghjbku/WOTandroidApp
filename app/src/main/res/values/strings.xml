@@ -23,4 +23,6 @@
     <string name="show_heavy">heavy tank</string>
     <string name="show_at">AT-SPG tank</string>
     <string name="show_spg">SPG tank</string>
+    <string name="display_price_as_zero">Can\'t be bought with credits</string>
+    <string name="display_price">%s</string>
 </resources>
