@@ -18,7 +18,7 @@ MarsRealEstateFinal - Solution Code
    - SafeArgs plugin
    - RoomDatabase használata (1-2 adatbázis táblával)
 
-My Api was hosted using spring, code can be found here: [](https://github.com/ghjbku/webdevproject/tree/master/src/main/java/hu/unideb/webdev/model)
+My Api was hosted using spring, code can be found here: [webdev repo, model folder](https://github.com/ghjbku/webdevproject/tree/master/src/main/java/hu/unideb/webdev/model)
 
 License
 -------
