@@ -17,6 +17,9 @@ MarsRealEstateFinal - Solution Code
    - RecyclerView header készítése
    - SafeArgs plugin
    - RoomDatabase használata (1-2 adatbázis táblával)
+
+My Api was hosted using spring, code can be found here: [](https://github.com/ghjbku/webdevproject/tree/master/src/main/java/hu/unideb/webdev/model)
+
 License
 -------
 
